@@ -96,6 +96,7 @@ def get_frame_embeddings(frames):
 
 # Function to calculate text similarity score based on description, address, price, and features
 def get_text_similarity_score(query_text, property_data):
+ 
     """
     Calculate a similarity score based on query_text and the property data.
     Factors in description, address, price, and features.
@@ -168,16 +169,24 @@ def search_properties(query_text, query_image, query_video):
     results = collection.query(
         query_embeddings=query_embedding.tolist(),
         n_results=5
-    )
-
-    # Sort the results with text similarity scores
+        )
+    print("\nresults", results)
     properties_with_scores = []
-    for prop in results['metadatas'][0]:
-        score = get_text_similarity_score(query_text, prop)
-        properties_with_scores.append((score, prop))
 
-    # Sort properties based on similarity scores (highest first)
-    properties_with_scores.sort(key=lambda x: x[0], reverse=True)
+    # If there's a text query, calculate text similarity scores
+    if query_text.strip():
+        # Sort the results with text similarity scores
+        for prop in results['metadatas'][0]:
+            score = get_text_similarity_score(query_text, prop)
+            properties_with_scores.append((score, prop))
+        
+        # Sort properties based on similarity scores (highest first)
+        properties_with_scores.sort(key=lambda x: x[0], reverse=True)
+    else:
+        # If no text query, just take the results as they are
+        properties_with_scores = [(None, prop) for prop in results['metadatas'][0]]
+
+ 
 
     # Prepare the best match image output
     best_match = properties_with_scores[0][1] if properties_with_scores else {}
@@ -196,9 +205,10 @@ def search_properties(query_text, query_image, query_video):
         }
         for prop in properties_with_scores[1:]  # Skip the best match
     ]
-    gallery_data_list_format = [[prop['image'], prop['text']] for prop in gallery_data]
 
+    gallery_data_list_format = [[prop['image'], prop['text']] for prop in gallery_data]
     return best_match_image_path, best_match_details, gallery_data_list_format
+
 
 # Gradio Interface
 iface = gr.Interface(

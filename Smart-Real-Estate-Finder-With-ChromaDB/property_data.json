@@ -20,7 +20,7 @@
     },
     {
       "id": "3",
-      "description": "Cozy mountain cabin with 3 bedrooms and a fireplace.",
+      "description": "Mountain cabin with 3 bedrooms and a fireplace.",
       "address": "789 Mountain View Rd, Hilltown",
       "price": 1500,
       "features": ["3 bedrooms", "fireplace", "mountain view"],
@@ -73,10 +73,10 @@
     },
     {
       "id": "9",
-      "description": "Stylish loft apartment with exposed brick walls and modern amenities.",
+      "description": "Brick house with open floor plan andhigh ceilings.",
       "address": "202 Loft St, Downtown",
       "price": 2500,
-      "features": ["2 bedrooms", "open floor plan", "high ceilings"],
+      "features": ["2 bedrooms", "open floor plan", "high ceilings", "brick house"],
       "image": "assets/img/9.jpg"
       
     },
@@ -88,6 +88,47 @@
       "features": ["5 bedrooms", "historic architecture", "large garden"],
       "image": "assets/img/10.jpg"
      
+    },
+    {
+      "id": "11",
+      "description": "Eco-friendly tiny house with solar panels and modern amenities.",
+      "address": "123 Green St, Ecoville",
+      "price": 800,
+      "features": ["tiny house", "solar panels", "eco-friendly"],
+      "image": "assets/img/11.jpg"
+    },
+    {
+      "id": "12",
+      "description": "Penthouse suite with panoramic city views and private elevator.",
+      "address": "100 Sky Tower, Metropolis",
+      "price": 6000,
+      "features": ["penthouse", "city view", "private elevator"],
+      "image": "assets/img/12.jpg"
+    },
+    {
+      "id": "13",
+      "description": "Two-story family home with 4 bedrooms and a spacious backyard.",
+      "address": "456 Maple St, Suburban Town",
+      "price": 3200,
+      "features": ["4 bedrooms", "two-story", "spacious backyard"],
+      "image": "assets/img/13.jpg"
+    },
+    {
+      "id": "14",
+      "description": "Modern house with 3 bedrooms, a garage, and a home office.",
+      "address": "789 Elm St, Quiet Neighborhood",
+      "price": 2800,
+      "features": ["3 bedrooms", "garage", "home office"],
+      "image": "assets/img/14.jpg"
+    },
+    {
+      "id": "15",
+      "description": "Luxury penthouse with rooftop garden and private hot tub.",
+      "address": "1000 Skyview Terrace, Skyline City",
+      "price": 8500,
+      "features": ["penthouse", "rooftop garden", "private hot tub"],
+      "image": "assets/img/15.jpg"
     }
+    
   ]
 }
