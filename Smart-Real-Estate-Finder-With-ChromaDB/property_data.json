@@ -1,0 +1,93 @@
+{
+  "properties": [
+    {
+      "id": "1",
+      "description": "Spacious 2-bedroom apartment with a balcony and city view.",
+      "address": "123 Main St, Cityville",
+      "price": 1200,
+      "features": ["2 bedrooms", "balcony", "city view"],
+      "image": "assets/img/1.jpg"
+    
+    },
+    {
+      "id": "2",
+      "description": "Luxury beachside home with 4 bedrooms, pool, and garden.",
+      "address": "456 Beachfront Ave, Seaside Town",
+      "price": 5000,
+      "features": ["4 bedrooms", "pool", "garden", "beachside"],
+      "image": "assets/img/2.jpg"
+     
+    },
+    {
+      "id": "3",
+      "description": "Cozy mountain cabin with 3 bedrooms and a fireplace.",
+      "address": "789 Mountain View Rd, Hilltown",
+      "price": 1500,
+      "features": ["3 bedrooms", "fireplace", "mountain view"],
+      "image": "assets/img/3.jpg"
+    
+    },
+    {
+      "id": "4",
+      "description": "Modern studio apartment in the heart of downtown.",
+      "address": "101 City Plaza, Urban Center",
+      "price": 900,
+      "features": ["studio", "downtown", "modern design"],
+      "image": "assets/img/4.jpg"
+      
+    },
+    {
+      "id": "5",
+      "description": "Country house with 5 acres of farmland and 4 bedrooms.",
+      "address": "555 Country Rd, Farmland",
+      "price": 2500,
+      "features": ["4 bedrooms", "farmhouse", "large land"],
+      "image": "assets/img/5.jpg"
+     
+    },
+    {
+      "id": "6",
+      "description": "Beachfront condo with ocean views and private access.",
+      "address": "789 Ocean Dr, Beach City",
+      "price": 3000,
+      "features": ["2 bedrooms", "ocean view", "private beach access"],
+      "image": "assets/img/6.jpg"
+    },
+    {
+      "id": "7",
+      "description": "Charming lakeside house with a private dock and stunning sunset views.",
+      "address": "321 Lakeside Dr, Lakeview",
+      "price": 3500,
+      "features": ["3 bedrooms", "dock", "lake view"],
+      "image": "assets/img/7.jpg"
+     
+    },
+    {
+      "id": "8",
+      "description": "Unique tree house nestled among the trees, perfect for a getaway.",
+      "address": "789 Forest Lane, Green Valley",
+      "price": 2000,
+      "features": ["2 bedrooms", "treehouse", "nature retreat"],
+      "image": "assets/img/8.jpg"
+     
+    },
+    {
+      "id": "9",
+      "description": "Stylish loft apartment with exposed brick walls and modern amenities.",
+      "address": "202 Loft St, Downtown",
+      "price": 2500,
+      "features": ["2 bedrooms", "open floor plan", "high ceilings"],
+      "image": "assets/img/9.jpg"
+      
+    },
+    {
+      "id": "10",
+      "description": "Beautiful Victorian house with intricate woodwork and large gardens.",
+      "address": "333 Victorian Ave, Historic District",
+      "price": 4500,
+      "features": ["5 bedrooms", "historic architecture", "large garden"],
+      "image": "assets/img/10.jpg"
+     
+    }
+  ]
+}
