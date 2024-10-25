@@ -177,23 +177,4 @@ This project makes use of the following technologies:
 - **OpenAI CLIP**
 - **VideoMAE**
 
-
-text search
-country house (show gallery)
-beachside / water front (show gallery)
-forest house (show gallery)
-brick
-mountain
-
-
-image search
-existing search
-    4
-    3
-non existent
-    images.jpg
-    images3
-
-video search
-    7
-    2
+ 

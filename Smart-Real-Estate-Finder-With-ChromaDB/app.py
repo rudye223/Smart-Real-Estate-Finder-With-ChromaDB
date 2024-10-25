@@ -1,6 +1,9 @@
-import pysqlite3
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# Quick fix for RuntimeError: Your system has an unsupported version of sqlite3. Chroma  requires sqlite3 >= 3.35.0.
+# import pysqlite3
+# import sys
+# sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+
 import json
 import os
 import torch
