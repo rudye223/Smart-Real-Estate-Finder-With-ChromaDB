@@ -129,7 +129,6 @@ def get_text_similarity_score(query_text, property_data):
 
     return score
 
-# Function to perform the search and return the best match and up to four similar properties
 def search_properties(query_text, query_image, query_video):
     query_embedding = None
     text_embedding = None
@@ -169,24 +168,32 @@ def search_properties(query_text, query_image, query_video):
     results = collection.query(
         query_embeddings=query_embedding.tolist(),
         n_results=5
-        )
-    print("\nresults", results)
+    )
+
+    # Sort the results by distance (lowest to highest)
+    sorted_results = sorted(
+        zip(results['distances'][0], results['metadatas'][0]),
+        key=lambda x: x[0]
+    )
+
+    # Separate sorted metadata and distances
+    sorted_properties = [prop for _, prop in sorted_results]
+    sorted_distances = [dist for dist, _ in sorted_results]
+
     properties_with_scores = []
 
     # If there's a text query, calculate text similarity scores
     if query_text.strip():
         # Sort the results with text similarity scores
-        for prop in results['metadatas'][0]:
+        for prop in sorted_properties:
             score = get_text_similarity_score(query_text, prop)
             properties_with_scores.append((score, prop))
         
         # Sort properties based on similarity scores (highest first)
         properties_with_scores.sort(key=lambda x: x[0], reverse=True)
     else:
-        # If no text query, just take the results as they are
-        properties_with_scores = [(None, prop) for prop in results['metadatas'][0]]
-
- 
+        # If no text query, just take the sorted results by vector distance
+        properties_with_scores = [(None, prop) for prop in sorted_properties]
 
     # Prepare the best match image output
     best_match = properties_with_scores[0][1] if properties_with_scores else {}

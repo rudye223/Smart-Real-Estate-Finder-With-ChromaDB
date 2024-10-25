@@ -180,9 +180,20 @@ This project makes use of the following technologies:
 
 text search
 country house (show gallery)
-beachside / waterfront (show gallery)
-forest house
+beachside / water front (show gallery)
+forest house (show gallery)
 brick
+mountain
 
 
 image search
+existing search
+    4
+    3
+non existent
+    images.jpg
+    images3
+
+video search
+    7
+    2
